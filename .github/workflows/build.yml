@@ -33,7 +33,7 @@ jobs:
 
     - name: Setting up the build
       run: |
-        cd ~/chromium/src
+        cd ~/chromium/src && mkdir -p out/Debug-iphonesimulator
         autoninja -C out/Debug-iphonesimulator gn_all
 
     - name: Generate Build Files
