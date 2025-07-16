@@ -23,6 +23,8 @@ jobs:
 
     - name: Install depot_tools
       run: |
+        df -h
+        exit 1
         cd $HOME
         git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
         echo ":$HOME/depot_tools:$HOME/depot_tools/python-bin" >> $GITHUB_PATH
