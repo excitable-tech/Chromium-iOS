@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: macos-15-large
 
     steps:
     - name: Checkout Repository
@@ -23,8 +23,6 @@ jobs:
 
     - name: Install depot_tools
       run: |
-        df -h
-        exit 1
         cd $HOME
         git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
         echo ":$HOME/depot_tools:$HOME/depot_tools/python-bin" >> $GITHUB_PATH
