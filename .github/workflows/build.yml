@@ -31,6 +31,11 @@ jobs:
         cd src
         gclient sync
 
+    - name: Setting up the build
+      run: |
+        cd ~/chromium/src
+        autoninja -C out/Debug-iphonesimulator gn_all
+
     - name: Generate Build Files
       run: |
         cd ~/chromium/src && mkdir -p out/Release-iphoneos
