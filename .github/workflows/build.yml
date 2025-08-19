@@ -28,7 +28,7 @@ jobs:
         sudo rm -rf /Users/runner/Caches/*
         sudo rm -rf /Users/runner/Logs/*
         df -h
-        ls /Users/runner/Library/Developer
+        ls /Users/runner/Library/Developer/Xcode
         df -h
         ls /Users/runner/Developer
 
