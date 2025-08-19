@@ -17,18 +17,18 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: latest-stable
-
-    - name: Cleanup Runner
+    - name: Prepare runner
       run: |
         df -h
+        sudo mv /Applications/Xcode_16.4.app /Applications/XcodeIOS.app
+        sudo xcode-select --switch /Applications/XcodeIOS.app/Contents/Developer
         sudo rm -rf /Users/runner/Library/Android
+        sudo rm -rf /Applications/Xcode_*
+        sudo rm -rf /Applications/Firefox*
+        sudo rm -rf /Applications/Google*
         sudo rm -rf /Users/runner/Caches/*
         sudo rm -rf /Users/runner/Logs/*
         df -h
-        ls /Applications
 
     - name: Install depot_tools
       run: |
