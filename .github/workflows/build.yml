@@ -21,6 +21,16 @@ jobs:
       with:
         xcode-version: latest-stable
 
+    - name: Cleanup Runner
+      run: |
+        df -h
+        sudo rm -rfv /Users/runner/Library/Android/sdk
+        sudo rm -rfv /Users/runner/Caches/*
+        sudo rm -rfv /Users/runner/Logs/*
+        df -h
+        ls /Users/runner/Library
+        ls /Users/runner/
+
     - name: Install depot_tools
       run: |
         cd $HOME
