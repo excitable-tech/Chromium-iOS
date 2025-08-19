@@ -24,11 +24,12 @@ jobs:
     - name: Cleanup Runner
       run: |
         df -h
-        sudo rm -rfv /Users/runner/Library/Android/sdk
-        sudo rm -rfv /Users/runner/Caches/*
-        sudo rm -rfv /Users/runner/Logs/*
+        sudo rm -rf /Users/runner/Library/Android
+        sudo rm -rf /Users/runner/Caches/*
+        sudo rm -rf /Users/runner/Logs/*
         df -h
         ls /Users/runner/Library
+        df -h
         ls /Users/runner/
 
     - name: Install depot_tools
