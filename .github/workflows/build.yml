@@ -28,9 +28,8 @@ jobs:
         sudo rm -rf /Users/runner/Caches/*
         sudo rm -rf /Users/runner/Logs/*
         df -h
-        ls /Users/runner/Library/Developer/Xcode
+        ls /Users/runner/Applications
         df -h
-        ls /Users/runner/Developer
 
     - name: Install depot_tools
       run: |
