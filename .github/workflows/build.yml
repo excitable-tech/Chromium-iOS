@@ -28,9 +28,8 @@ jobs:
         sudo rm -rf /Users/runner/Caches/*
         sudo rm -rf /Users/runner/Logs/*
         df -h
-        ls /Users/runner/Library
+        ls /Users/runner/Developer
         df -h
-        ls /Users/runner/
 
     - name: Install depot_tools
       run: |
