@@ -49,7 +49,7 @@ jobs:
     - name: Generate Build Files
       run: |
         cd ~/chromium/src && mkdir -p out/Release-iphoneos
-        gn gen out/Release-iphoneos --args='is_debug=false target_os="ios" ios_enable_code_signing=false is_component_build=false target_environment="device" target_cpu="arm64" use_blink=true'
+        gn gen out/Release-iphoneos --args='use_jumbo_build=true enable_nacl=false is_debug=false strip_absolute_paths_from_debug_symbols=true symbol_level=0 blink_symbol_level=0 target_os="ios" ios_enable_code_signing=false is_component_build=false target_environment="device" target_cpu="arm64" use_blink=true'
 
     - name: Build Chromium for iOS
       continue-on-error: true
